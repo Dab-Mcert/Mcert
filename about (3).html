@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MCert — About Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:#1B2A4A;
+  --teal:#4ABFA3;
+  --teal-l:#D8F5EE;
+  --lav:#7B6FD4;
+  --gold:#D9A020;
+  --bg:#F5F3EE;
+  --white:#FFFFFF;
+  --muted:#8A9BB0;
+  --text:#2C3E5A;
+  --font:'Plus Jakarta Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);background:var(--navy);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;background:rgba(27,42,74,0.97);backdrop-filter:blur(12px);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:58px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;filter:brightness(0) invert(1);}
+.nav-logo-text{font-size:15px;font-weight:700;color:white;letter-spacing:0.04em;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.55);font-size:11px;font-weight:500;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);}
+
+/* HERO */
+.hero{min-height:85vh;background:var(--navy);display:flex;align-items:center;padding:8rem 6% 5rem;position:relative;overflow:hidden;}
+.hero-wave{position:absolute;right:-60px;top:0;bottom:0;width:55%;pointer-events:none;}
+.hero-wave svg{width:100%;height:100%;}
+.hero-dot-lg{position:absolute;right:28%;top:8%;width:48px;height:48px;background:#9B6FD4;border-radius:50%;}
+.hero-dot-sm{position:absolute;right:22%;top:32%;width:32px;height:32px;background:#9B6FD4;border-radius:50%;}
+.hero-spark{position:absolute;right:34%;top:18%;}
+.hero-content{position:relative;z-index:2;max-width:580px;}
+.hero-content h1{font-size:clamp(2.8rem,5vw,4.4rem);font-weight:800;line-height:1.06;letter-spacing:-0.02em;margin-bottom:1.4rem;}
+.hero-content p{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.78;max-width:480px;}
+
+/* SECTION SHARED */
+.section-header{text-align:center;padding:5rem 4% 3.5rem;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;}
+.section-header h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);letter-spacing:-0.02em;margin-bottom:1rem;}
+.section-header p{font-size:0.97rem;color:rgba(255,255,255,0.5);line-height:1.75;max-width:560px;margin:0 auto;}
+
+/* ── CO-FOUNDERS ── */
+#founders{background:var(--bg);padding:0 5% 4rem;}
+.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;width:100%;}
+.founder-card{background:var(--white);border-radius:20px;padding:3rem;border:1px solid rgba(27,42,74,0.08);display:flex;flex-direction:column;}
+.founder-photo-wrap{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 0 1.4rem;border:3px solid var(--teal-l);}
+.founder-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.founder-role{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:0.4rem;}
+.founder-name{font-size:1.5rem;font-weight:800;color:var(--navy);letter-spacing:-0.02em;margin-bottom:1.2rem;}
+.founder-bio{font-size:0.9rem;line-height:1.82;color:var(--muted);flex:1;}
+.founder-bio p{margin-bottom:0.7rem;}
+.founder-bio p:last-child{margin-bottom:1.6rem;}
+.founder-linkedin{margin-top:auto;}
+.linkedin-btn{display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy);color:var(--white);padding:0.5rem 1.1rem;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,transform 0.18s;}
+.linkedin-btn:hover{background:var(--teal);color:var(--navy);transform:translateY(-1px);}
+.linkedin-btn svg{width:14px;height:14px;}
+
+/* ── PARTNERS ── */
+#partners{background:var(--navy);padding:5rem 5%;}
+#partners .section-header{padding:0 0 3.5rem;}
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;max-width:900px;margin:0 auto;}
+.partner-card{background:var(--white);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 2px 20px rgba(0,0,0,0.15);}
+.partner-photo-wrap{width:120px;height:120px;border-radius:50%;overflow:hidden;margin-bottom:1.2rem;border:3px solid var(--teal-l);}
+.partner-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.partner-photo-placeholder{width:120px;height:120px;border-radius:50%;background:var(--teal-l);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;}
+.partner-role{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:0.4rem;}
+.partner-org{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:0.3rem;}
+.partner-name{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1rem;letter-spacing:-0.01em;}
+.partner-bio{font-size:0.85rem;line-height:1.75;color:#4A5A72;text-align:left;}
+
+/* ── ADVISORS ── */
+#advisors{background:var(--bg);padding:5rem 5%;}
+#advisors .section-header{padding:0 0 3.5rem;text-align:center;}
+#advisors .section-header h2{color:var(--navy);}
+#advisors .section-header p{color:var(--muted);}
+#advisors .section-label{color:var(--teal);}
+/* Grid scales from 2 → 3 → 4 cards per row as more are added */
+.advisors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;max-width:1080px;margin:0 auto;}
+.advisor-card{background:var(--white);border-radius:20px;padding:2rem;text-align:center;box-shadow:0 2px 16px rgba(27,42,74,0.07);transition:transform 0.2s,box-shadow 0.2s;}
+.advisor-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(27,42,74,0.12);}
+.advisor-photo-wrap{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 1.1rem;border:3px solid var(--teal-l);}
+.advisor-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.advisor-role{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:0.35rem;}
+.advisor-name{font-size:1.15rem;font-weight:800;color:var(--navy);letter-spacing:-0.01em;margin-bottom:0.3rem;}
+.advisor-org{font-size:0.82rem;color:var(--muted);font-weight:500;margin-bottom:0.9rem;}
+.advisor-bio{font-size:0.83rem;line-height:1.72;color:#4A5A72;text-align:left;}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:1rem;border-top:1px solid rgba(255,255,255,0.06);}
+.footer-logo{font-size:15px;font-weight:700;color:white;letter-spacing:0.04em;display:flex;align-items:center;gap:8px;}
+.footer-logo span{color:var(--teal);}
+.footer-logo img{width:28px;height:28px;filter:brightness(0) invert(1);}
+footer p{font-size:0.82rem;color:rgba(255,255,255,0.45);text-align:center;}
+footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
+.footer-links{display:flex;gap:1.8rem;justify-content:flex-end;}
+.footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.footer-links a:hover{color:var(--teal);}
+
+@media(max-width:768px){
+  .founders-grid{grid-template-columns:1fr;}
+  .partners-grid{grid-template-columns:1fr;}
+  .advisors-grid{grid-template-columns:1fr 1fr;}
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;}
+  footer{grid-template-columns:1fr;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+@media(max-width:480px){
+  .advisors-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="mcert_logo.svg" alt="MCert logo"/>
+    <span class="nav-logo-text">MCert</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="mcert_report_original.html">Convening</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-wave">
+    <svg viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#4ABFA3"/>
+          <stop offset="100%" stop-color="#2A8FAA"/>
+        </linearGradient>
+      </defs>
+      <path d="M500 0 C420 80 320 120 380 260 C440 400 560 420 520 560 C480 700 340 720 380 860 C400 940 480 900 600 900 L600 0 Z" fill="url(#waveGrad)" opacity="0.9"/>
+      <path d="M580 0 C500 100 400 140 460 280 C520 420 640 440 600 580 L600 0 Z" fill="#3DAFC0" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="hero-dot-lg"></div>
+  <div class="hero-dot-sm"></div>
+  <div class="hero-spark">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <path d="M19 2 L22 16 L36 19 L22 22 L19 36 L16 22 L2 19 L16 16 Z" fill="#9B6FD4"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <h1>Building Clarity<br>Together</h1>
+    <p>We believe everyone deserves access to safe, effective digital mental health support. MCert is creating the non-partisan clarity and Systemic Trust the ecosystem needs to move from confusion to confident action.</p>
+  </div>
+</section>
+
+<!-- OUR TEAM HEADER -->
+<section id="story" style="background:var(--bg);padding:5rem 5% 0;">
+  <div style="max-width:760px;margin:0 auto;text-align:center;">
+    <p class="section-label" style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.8rem;">Our Team</p>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--navy);letter-spacing:-0.02em;margin-bottom:1rem;">Our Team</h2>
+    <p style="font-size:1rem;line-height:1.82;color:var(--muted);">Meet the team guiding this initiative with scientific rigor, equity, and a commitment to making subclinical digital mental health tools accessible to all</p>
+  </div>
+</section>
+
+<!-- CO-FOUNDERS -->
+<section id="founders">
+  <div class="founders-grid">
+  <div class="founders-grid">
+
+    <!-- Greta -->
+    <div class="founder-card">
+      <div class="founder-photo-wrap">
+        <img src="greta-mcanany.png" alt="Greta McAnany"/>
+      </div>
+      <p class="founder-role">Co-Founder &amp; Executive Director</p>
+      <h2 class="founder-name">Greta McAnany</h2>
+      <div class="founder-bio">
+        <p>Greta is a public health entrepreneur focused on youth mental health through media and tech. A former award-winning filmmaker, she brings over a decade of experience in youth care, blending storytelling, product, and civic leadership.</p>
+        <p>As CEO and co-founder of Blue Fever—a mental health AI companion for Gen Z/Alpha—she's supported 3M+ youth, earning recognition from RockHealth, Forbes, and Apple.</p>
+        <p>A 2024 RockHealth Innovator and Pivotal Ventures grantee, Greta advises on youth trust, safety, and data privacy policy in California and New Mexico. Her work appears in TechCrunch, CBS, NBC, Nylon, and Masters of Scale.</p>
+      </div>
+      <div class="founder-linkedin">
+        <a href="https://www.linkedin.com/in/greta-mcanany/" target="_blank" class="linkedin-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      </div>
+    </div>
+
+    <!-- Dani -->
+    <div class="founder-card">
+      <div class="founder-photo-wrap">
+        <img src="dani-bicknell.png" alt="Dani Bicknell"/>
+      </div>
+      <p class="founder-role">Co-Founder &amp; Executive Producer</p>
+      <h2 class="founder-name">Dani Bicknell</h2>
+      <div class="founder-bio">
+        <p>Dani is an author, educator, and cross-sector collaborator dedicated to bringing clarity, integrity, and cohesion to the digital mental health ecosystem. With more than a decade of experience across sectors, she has designed accelerator programs, frameworks, and research initiatives for UNESCO, UC Berkeley, global NGOs, large tech companies, and early-stage social impact ventures worldwide.</p>
+        <p>During the pandemic, Dani led accelerator and funder research that surfaced a defining insight: meaningful innovation emerges when founders, funders, and system enablers align around evidence, equity, and lived experience.</p>
+        <p>Dani co-founded MCert to establish the non-partisan Quality Standards that foster Systemic Trust, unlock responsible innovation, and benefit everyone seeking clarity in this complex market.</p>
+      </div>
+      <div class="founder-linkedin">
+        <a href="https://www.linkedin.com/in/daniellebicknell/" target="_blank" class="linkedin-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="section-header">
+    <p class="section-label">Collaboration</p>
+    <h2>Our Partners</h2>
+    <p>Meet the cross-sector partners who help advance MCert's commitment to clarity, rigor, and Systemic Trust across the digital mental health ecosystem</p>
+  </div>
+  <div class="partners-grid">
+
+    <!-- Jen Huberty -->
+    <div class="partner-card">
+      <div class="partner-photo-wrap">
+        <img src="jen-huberty.jpg" alt="Jen Huberty"/>
+      </div>
+      <p class="partner-role">Science Partner</p>
+      <p class="partner-org">FitMinded™</p>
+      <h3 class="partner-name">Jen Huberty</h3>
+      <p class="partner-bio">Fit Minded is a strategic applied science firm founded by Dr. Jen Huberty, former Head of Science at Calm. The firm partners with digital health, femtech, and food-as-medicine innovators to design, validate, and communicate the science behind their products, strengthening credibility, accelerating growth, and advancing evidence-based innovation. With 250 clients and 50 peer-reviewed publications, FitMinded is redefining how evidence drives both innovation and business success.</p>
+      <a href="https://www.linkedin.com/in/jennifer-huberty-phd-8b320066/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <!-- Annette Fellows -->
+    <div class="partner-card">
+      <div class="partner-photo-wrap">
+        <img src="annette-fellows.jpeg" alt="Annette Fellows"/>
+      </div>
+      <p class="partner-role">Business Strategy Partner</p>
+      <p class="partner-org">Return on Vision Consulting</p>
+      <h3 class="partner-name">Annette Fellows</h3>
+      <p class="partner-bio">CEO of Return on Vision Consulting, Annette helps C-Suite leaders in healthcare, financial services, and startups translate their visions into measurable results. She brings broad perspective across strategy, sales, marketing, finance, technology, and operations from her time at UnitedHealth Group and Carlson Marketing Worldwide. Annette is Board Chair of the Foundation for Social Connection.</p>
+      <a href="https://www.linkedin.com/in/annette-fellows/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
+<section id="advisors">
+  <div class="section-header">
+    <p class="section-label">Expertise</p>
+    <h2>Our Advisors</h2>
+    <p>A growing network of cross-sector experts guiding MCert's work with scientific rigor, lived experience, and strategic insight</p>
+  </div>
+  <div class="advisors-grid">
+
+    <!-- Lisa Walker -->
+    <div class="advisor-card">
+      <div class="advisor-photo-wrap">
+        <img src="lisa-walker.jpg" alt="Lisa Walker"/>
+      </div>
+      <p class="advisor-role">Community Strategy Advisor</p>
+      <h3 class="advisor-name">Lisa Walker</h3>
+      <p class="advisor-org">Innovating Impact LLC</p>
+      <p class="advisor-bio">Principal of Innovating Impact LLC, Lisa works with social impact organizations to drive meaningful outcomes across inclusive co-design, strategic planning, and youth mental health. With twenty years of experience in adolescent health and digital innovation, she previously served as VP of Digital Impact at Peer Health Exchange, where she led the development of selfsea, a youth co-designed digital mental health product.</p>
+      <a href="https://www.linkedin.com/in/lisahwalker11/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <!-- Kelsey McAlister -->
+    <div class="advisor-card">
+      <div class="advisor-photo-wrap">
+        <img src="kelsey-mcalister.jpg" alt="Kelsey McAlister"/>
+      </div>
+      <p class="advisor-role">Research Advisor</p>
+      <h3 class="advisor-name">Kelsey McAlister, PhD, MS</h3>
+      <p class="advisor-org">FitMinded</p>
+      <p class="advisor-bio">A dedicated health behavior scientist, Kelsey applies scientific knowledge to drive strategic advancements in the health industry. She has a strong background in public health, physical and mental health, and youth behaviors and development. Passionate about leveraging scientific research to generate actionable insights, she designs and conducts research studies to evaluate health interventions, effectively communicating findings to stakeholders through reports, publications, and presentations — translating research into practical, scalable solutions.</p>
+      <a href="https://www.linkedin.com/in/kelsey-mcalister-phd-ms-b2992377/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="mcert_logo.svg" alt="MCert"/>
+    M<span>Cert</span>
+  </div>
+  <p>MCert is an initiative spearheaded by <a href="https://givingback.org/" target="_blank">The Giving Back Fund</a>, with support from <a href="https://www.pivotal.com/" target="_blank">Pivotal</a>.</p>
+  <nav class="footer-links">
+    <a href="about.html">About</a>
+    <a href="mcert_report_original.html">Convening</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</footer>
+
+</body>
+</html>
