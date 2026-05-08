@@ -38,9 +38,9 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 @media(max-width:600px){.nav-links{display:none;}nav{padding:0 1.5rem;}}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 6% 5rem;position:relative;overflow:hidden;}
+.hero{min-height:80vh;background:var(--navy);display:flex;align-items:center;padding:8rem 6% 5rem;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 50%,rgba(74,191,163,0.1) 0%,transparent 70%);}
-.hero-left{position:relative;z-index:2;}
+.hero-left{position:relative;z-index:2;max-width:680px;}
 .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem;animation:fadeUp 0.8s 0.2s both;}
 .hero h1{font-size:clamp(2.8rem,5vw,4.8rem);font-weight:800;color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.5rem;animation:fadeUp 0.8s 0.4s both;}
 .hero h1 em{color:var(--teal);font-style:normal;}
@@ -50,8 +50,8 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(74,191,163,0.3);}
 .btn-primary .arrow{width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.82rem;}
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative;z-index:2;animation:fadeUp 0.9s 0.3s both;}
-.brain-wrap{width:85%;max-width:500px;}
-.brain-wrap svg{width:100%;height:auto;display:block;}
+.brain-wrap{width:85%;max-width:420px;}
+.brain-wrap img{width:100%;height:auto;display:block;}
 
 /* SECTIONS */
 .section{padding:7rem 2rem;}
@@ -139,13 +139,12 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
 @media(max-width:960px){
-  .hero{grid-template-columns:1fr;padding-top:8rem;}
-  .hero-right{margin-top:3rem;}
   .mission-text-grid,.vision-cards,.why-cards{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
-  nav{padding:0 1.5rem;}
 }
-@media(max-width:480px){
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr;padding-top:5rem;}
+  .hero-right{display:none;}
   .nav-links{display:none;}
 }
 </style>
@@ -183,11 +182,6 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <h1>The Standard<br>for <em>Clarity</em></h1>
     <p class="hero-sub">Fostering joint action to tackle the youth mental health crisis, MCert is your guide, providing <strong>science-backed Quality Standards</strong> to shift the digital health market from chaos to efficacy and confidence.</p>
     <a href="#join" class="btn-primary">Join Us <span class="arrow">↗</span></a>
-  </div>
-  <div class="hero-right">
-    <div class="brain-wrap">
-      <img src="mcert_brain.svg" alt="MCert brain-tree illustration" style="width:100%;height:auto;display:block;"/>
-    </div>
   </div>
 </section>
 
