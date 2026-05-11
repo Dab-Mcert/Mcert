@@ -86,14 +86,14 @@ nav{position:fixed;top:0;left:0;right:0;background:rgba(27,42,74,0.97);backdrop-
 #advisors .section-label{color:var(--teal);}
 /* Grid scales from 2 → 3 → 4 cards per row as more are added */
 .advisors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;max-width:1080px;margin:0 auto;}
-.advisor-card{background:var(--white);border-radius:20px;padding:2rem;text-align:center;box-shadow:0 2px 16px rgba(27,42,74,0.07);transition:transform 0.2s,box-shadow 0.2s;}
+.advisor-card{background:var(--white);border-radius:20px;padding:2rem;text-align:center;box-shadow:0 2px 16px rgba(27,42,74,0.07);transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center;}
 .advisor-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(27,42,74,0.12);}
 .advisor-photo-wrap{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 1.1rem;border:3px solid var(--teal-l);}
 .advisor-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 .advisor-role{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:0.35rem;}
 .advisor-name{font-size:1.15rem;font-weight:800;color:var(--navy);letter-spacing:-0.01em;margin-bottom:0.3rem;}
 .advisor-org{font-size:0.82rem;color:var(--muted);font-weight:500;margin-bottom:0.9rem;}
-.advisor-bio{font-size:0.83rem;line-height:1.72;color:#4A5A72;text-align:left;}
+.advisor-bio{font-size:0.83rem;line-height:1.72;color:#4A5A72;text-align:left;flex:1;margin-bottom:1.2rem;}
 
 /* FOOTER */
 footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:1rem;border-top:1px solid rgba(255,255,255,0.06);}
@@ -201,7 +201,7 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
     <!-- Dani -->
     <div class="founder-card">
       <div class="founder-photo-wrap">
-        <img src="dani-bicknell.png" alt="Dani Bicknell"/>
+        <img src="dani-bicknell.png" alt="Dani Bicknell" style="object-position:center 15%;"/>
       </div>
       <p class="founder-role">Co-Founder &amp; Executive Producer</p>
       <h2 class="founder-name">Dani Bicknell</h2>
@@ -316,10 +316,7 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
   </div>
 </section>
 <footer>
-  <div class="footer-logo">
-    <img src="mcert_logo.svg" alt="MCert"/>
-    M<span>Cert</span>
-  </div>
+  <div class="footer-logo"><img src="mcert_logo.svg" alt="MCert"/>MCert</div>
   <p>MCert is an initiative spearheaded by <a href="https://givingback.org/" target="_blank">The Giving Back Fund</a>, with support from <a href="https://www.pivotal.com/" target="_blank">Pivotal</a>.</p>
   <nav class="footer-links">
     <a href="about.html">About</a>
