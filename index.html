@@ -38,9 +38,9 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 @media(max-width:600px){.nav-links{display:none;}nav{padding:0 1.5rem;}}
 
 /* HERO */
-.hero{min-height:80vh;background:var(--navy);display:flex;align-items:center;padding:8rem 6% 5rem;position:relative;overflow:hidden;}
+.hero{min-height:80vh;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 6% 5rem;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 50%,rgba(74,191,163,0.1) 0%,transparent 70%);}
-.hero-left{position:relative;z-index:2;max-width:680px;}
+.hero-left{position:relative;z-index:2;}
 .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem;animation:fadeUp 0.8s 0.2s both;}
 .hero h1{font-size:clamp(2.8rem,5vw,4.8rem);font-weight:800;color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.5rem;animation:fadeUp 0.8s 0.4s both;}
 .hero h1 em{color:var(--teal);font-style:normal;}
@@ -48,9 +48,9 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 .hero-sub strong{color:rgba(255,255,255,0.85);font-weight:600;}
 .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal);color:var(--navy);padding:0.8rem 1.6rem;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;letter-spacing:0.04em;transition:transform 0.18s,box-shadow 0.18s;animation:fadeUp 0.8s 0.8s both;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(74,191,163,0.3);}
-.btn-primary .arrow{width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.82rem;}
+.btn-primary .arrow{width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative;z-index:2;animation:fadeUp 0.9s 0.3s both;}
-.brain-wrap{width:85%;max-width:420px;}
+.brain-wrap{width:85%;max-width:480px;opacity:0.95;}
 .brain-wrap img{width:100%;height:auto;display:block;}
 
 /* SECTIONS */
@@ -92,15 +92,11 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 #whynow .section-title{color:white;}
 #whynow .section-body{color:rgba(255,255,255,0.5);}
 .why-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3.5rem;}
-.why-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.8rem;transition:background 0.2s;}
-.why-card:hover{background:rgba(255,255,255,0.09);}
-.why-card-icon{width:40px;height:40px;border-radius:10px;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;}
-.why-card:nth-child(1) .why-card-icon{background:rgba(74,191,163,0.15);}
-.why-card:nth-child(2) .why-card-icon{background:rgba(232,112,90,0.15);}
-.why-card:nth-child(3) .why-card-icon{background:rgba(217,160,32,0.15);}
-.why-card:nth-child(4) .why-card-icon{background:rgba(123,111,212,0.15);}
-.why-card h3{font-size:0.97rem;font-weight:700;color:white;margin-bottom:0.7rem;line-height:1.3;}
-.why-card p{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.72;}
+.why-card{background:#fff;border-radius:20px;padding:1.8rem;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;}
+.why-card-content{}
+.why-card h3{font-size:0.97rem;font-weight:800;color:#1B2A4A;margin-bottom:0.7rem;line-height:1.3;}
+.why-card p{font-size:0.85rem;color:#4a5a72;line-height:1.72;}
+.why-deco{margin-top:1rem;}
 
 /* APPROACH */
 #approach{background:var(--white);}
@@ -139,13 +135,17 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
 @media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:5rem;}
+  .hero-right{display:none;}
   .mission-text-grid,.vision-cards,.why-cards{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
 }
-@media(max-width:700px){
-  .hero{grid-template-columns:1fr;padding-top:5rem;}
-  .hero-right{display:none;}
+@media(max-width:600px){
+  nav{padding:0 1.2rem;}
   .nav-links{display:none;}
+  footer{grid-template-columns:1fr;text-align:center;gap:0.8rem;}
+  .footer-links{justify-content:center;}
+  .why-cards{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
@@ -175,7 +175,16 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <p class="hero-eyebrow">The Standard for Clarity</p>
     <h1>The Standard<br>for <em>Clarity</em></h1>
     <p class="hero-sub">Fostering joint action to tackle the youth mental health crisis, MCert is your guide, providing <strong>science-backed Quality Standards</strong> to shift the digital health market from chaos to efficacy and confidence.</p>
-    <a href="#join" class="btn-primary">Join Us <span class="arrow">↗</span></a>
+    <a href="#join" class="btn-primary">Join Us
+      <span class="arrow">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="brain-wrap">
+      <img src="mcert_brain.svg" alt="MCert brain illustration"/>
+    </div>
   </div>
 </section>
 
@@ -241,32 +250,89 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <p class="section-body">Four forces are converging to make MCert's work urgent and necessary.</p>
     <div class="why-cards">
       <div class="why-card">
-        <div class="why-card-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L2 7l8 5 8-5-8-5zM2 13l8 5 8-5M2 10l8 5 8-5" stroke="#4ABFA3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="why-card-content">
+          <h3>No Common Language</h3>
+          <p>Digital mental health tools are multiplying rapidly, yet the ecosystem lacks a shared way to define, categorize, or evaluate them — perpetuating confusion rather than clarity.</p>
         </div>
-        <h3>No Common Language</h3>
-        <p>Digital mental health tools are multiplying rapidly, yet the ecosystem lacks a shared way to define, categorize, or evaluate them — perpetuating confusion rather than clarity.</p>
+        <div class="why-deco">
+          <!-- Dots pattern -->
+          <svg width="100%" height="60" viewBox="0 0 200 60" fill="none">
+            <circle cx="10" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="30" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="50" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="70" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="90" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="110" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="130" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="150" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="10" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="30" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="50" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="70" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="90" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="110" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="130" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="150" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="10" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="30" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="50" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="70" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="90" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+          </svg>
+        </div>
       </div>
       <div class="why-card">
-        <div class="why-card-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 2L17 6M17 6L13 10M17 6H7a4 4 0 000 8h3" stroke="#E8705A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="why-card-content">
+          <h3>Innovation Outpacing Infrastructure</h3>
+          <p>The surge of new products, accelerated by generative AI, has outpaced the systems designed to assess quality, safety, and effectiveness.</p>
         </div>
-        <h3>Innovation Outpacing Infrastructure</h3>
-        <p>The surge of new products, accelerated by generative AI, has outpaced the systems designed to assess quality, safety, and effectiveness.</p>
+        <div class="why-deco">
+          <!-- Two overlapping circles -->
+          <svg width="100%" height="60" viewBox="0 0 200 60" fill="none">
+            <ellipse cx="70" cy="45" rx="55" ry="38" fill="#4ABFA3" opacity="0.2"/>
+            <ellipse cx="130" cy="45" rx="55" ry="38" fill="#4ABFA3" opacity="0.15"/>
+          </svg>
+        </div>
       </div>
       <div class="why-card">
-        <div class="why-card-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM10 6v4l3 3" stroke="#D9A020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="why-card-content">
+          <h3>Rising Reliance on Digital Support</h3>
+          <p>More people are turning to digital tools for mental health support, but many offerings remain unproven. Without clarity, system enablers risk investing in solutions that fail — or cause harm.</p>
         </div>
-        <h3>Rising Reliance on Digital Support</h3>
-        <p>More people are turning to digital tools for mental health support, but many offerings remain unproven. Without clarity, system enablers risk investing in solutions that fail — or cause harm.</p>
+        <div class="why-deco">
+          <!-- Wave lines -->
+          <svg width="100%" height="60" viewBox="0 0 200 60" fill="none">
+            <path d="M0,20 Q25,5 50,20 Q75,35 100,20 Q125,5 150,20 Q175,35 200,20" stroke="#4ABFA3" stroke-width="2.5" fill="none" opacity="0.45"/>
+            <path d="M0,38 Q25,23 50,38 Q75,53 100,38 Q125,23 150,38 Q175,53 200,38" stroke="#4ABFA3" stroke-width="2" fill="none" opacity="0.25"/>
+          </svg>
+        </div>
       </div>
       <div class="why-card">
-        <div class="why-card-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M3 5l4 5-4 5M17 5l-4 5 4 5" stroke="#7B6FD4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="why-card-content">
+          <h3>Unprecedented Deregulation</h3>
+          <p>In the US, federal oversight of digital mental health tools is receding just as the need for accountability is growing — leaving payors and policymakers without the guardrails to make informed decisions.</p>
         </div>
-        <h3>Unprecedented Deregulation</h3>
-        <p>In the US, federal oversight of digital mental health tools is receding just as the need for accountability is growing — leaving payors and policymakers without the guardrails to make informed decisions.</p>
+        <div class="why-deco">
+          <!-- Dots pattern variation -->
+          <svg width="100%" height="60" viewBox="0 0 200 60" fill="none">
+            <circle cx="10" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="30" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="50" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="70" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="90" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="110" cy="10" r="3" fill="#4ABFA3" opacity="0.4"/>
+            <circle cx="10" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="30" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="50" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="70" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="90" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="110" cy="30" r="3" fill="#4ABFA3" opacity="0.3"/>
+            <circle cx="10" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="30" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="50" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+            <circle cx="70" cy="50" r="3" fill="#4ABFA3" opacity="0.2"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -331,7 +397,11 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <span class="join-tag">Evaluators</span>
     <span class="join-tag">Big Tech & Social Platforms</span>
   </div>
-  <a href="#contact" class="btn-join">Join Us →</a>
+  <a href="#contact" class="btn-join">Join Us
+    <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
 </section>
 
 <!-- CONTACT -->
@@ -341,7 +411,10 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-body" style="margin-bottom:2.5rem;">We'd love to hear from you. Whether you're interested in our Quality Standards, exploring partnership opportunities, or joining our next convening — reach out directly.</p>
     <a href="mailto:hello@mcert.space" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;">
-      Email Us <span class="arrow">↗</span>
+      Email Us
+      <span class="arrow">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
     </a>
   </div>
 </section>
@@ -349,8 +422,8 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 <!-- FOOTER -->
 <footer>
   <div style="display:flex;align-items:center;gap:10px;">
-    <img src="mcert_logo.svg" alt="MCert" style="width:36px;height:36px;filter:brightness(0) invert(1);"/>
-    <span class="footer-logo">M<span>Cert</span></span>
+    <img src="mcert_logo.svg" alt="MCert" style="width:32px;height:32px;filter:brightness(0) invert(1);"/>
+    <span style="font-size:15px;font-weight:700;color:white;letter-spacing:0.04em;">M<span style="color:var(--teal);">Cert</span></span>
   </div>
   <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);text-align:center;">
     MCert is an initiative spearheaded by <a href="https://givingback.org/" target="_blank" style="color:var(--teal);text-decoration:none;font-weight:500;">The Giving Back Fund</a>, with support from <a href="https://www.pivotal.com/" target="_blank" style="color:var(--teal);text-decoration:none;font-weight:500;">Pivotal</a>.
