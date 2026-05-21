@@ -46,12 +46,12 @@ nav{position:fixed;top:0;left:0;right:0;background:#4ABFA3;z-index:1000;display:
 .hero h1 em{color:var(--teal);font-style:normal;}
 .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);font-weight:400;max-width:480px;line-height:1.75;margin-bottom:2.5rem;animation:fadeUp 0.8s 0.6s both;}
 .hero-sub strong{color:rgba(255,255,255,0.85);font-weight:600;}
-.btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal);color:var(--navy);padding:0.85rem 2rem;border-radius:100px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:transform 0.18s,box-shadow 0.18s;animation:fadeUp 0.8s 0.8s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal);color:var(--navy);padding:0.85rem 1.8rem;border-radius:100px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:transform 0.18s,box-shadow 0.18s;animation:fadeUp 0.8s 0.8s both;white-space:nowrap;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(74,191,163,0.3);}
-.btn-primary .arrow{width:26px;height:26px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.btn-join{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal);color:var(--navy);font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.85rem 2rem;border-radius:100px;text-decoration:none;transition:background 0.2s,transform 0.2s;position:relative;z-index:2;}
+.btn-primary .arrow{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.btn-join{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal);color:var(--navy);font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.85rem 1.8rem;border-radius:100px;text-decoration:none;transition:background 0.2s,transform 0.2s;position:relative;z-index:2;white-space:nowrap;}
 .btn-join:hover{background:#5dd4b6;transform:translateY(-2px);}
-.btn-join .arrow{width:26px;height:26px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.btn-join .arrow{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative;z-index:2;animation:fadeUp 0.9s 0.3s both;}
 .brain-wrap{width:85%;max-width:480px;opacity:0.95;}
 .brain-wrap img{width:100%;height:auto;display:block;}
@@ -178,11 +178,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <p class="hero-eyebrow">The Standard for Clarity</p>
     <h1>The Standard<br>for <em>Clarity</em></h1>
     <p class="hero-sub">Fostering joint action to tackle the youth mental health crisis, MCert is your guide, providing <strong>science-backed Quality Standards</strong> to shift the digital health market from chaos to efficacy and confidence.</p>
-    <a href="#join" class="btn-primary">Join Us
-      <span class="arrow">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-    </a>
+    <a href="#join" class="btn-primary">JOIN US <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
   <div class="hero-right">
     <div class="brain-wrap">
@@ -400,11 +396,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <span class="join-tag">Evaluators</span>
     <span class="join-tag">Big Tech & Social Platforms</span>
   </div>
-  <a href="#contact" class="btn-join">Join Us
-    <span class="arrow">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </span>
-  </a>
+  <a href="#contact" class="btn-join">JOIN US <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </section>
 
 <!-- CONTACT -->
@@ -413,12 +405,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <p class="section-label">Contact</p>
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-body" style="margin-bottom:2.5rem;">We'd love to hear from you. Whether you're interested in our Quality Standards, exploring partnership opportunities, or joining our next convening — reach out directly.</p>
-    <a href="mailto:hello@mcert.space" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;">
-      Email Us
-      <span class="arrow">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-    </a>
+    <a href="mailto:hello@mcert.space" class="btn-primary">EMAIL US <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
