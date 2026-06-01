@@ -85,7 +85,7 @@ nav{position:fixed;top:0;left:0;right:0;background:rgba(27,42,74,0.97);backdrop-
 #advisors .section-header p{color:var(--muted);}
 #advisors .section-label{color:var(--teal);}
 /* Grid scales from 2 → 3 → 4 cards per row as more are added */
-.advisors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;max-width:1080px;margin:0 auto;}
+.advisors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1080px;margin:0 auto;}
 .advisor-card{background:var(--white);border-radius:20px;padding:2rem;text-align:center;box-shadow:0 2px 16px rgba(27,42,74,0.07);transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center;}
 .advisor-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(27,42,74,0.12);}
 .advisor-photo-wrap{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 1.1rem;border:3px solid var(--teal-l);}
@@ -234,7 +234,7 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
       <div class="partner-photo-wrap">
         <img src="jen-huberty.jpg" alt="Jen Huberty"/>
       </div>
-      <p class="partner-role">Science Partner</p>
+      <p class="partner-role">Science Chair</p>
       <p class="partner-org">FitMinded™</p>
       <h3 class="partner-name">Jen Huberty</h3>
       <p class="partner-bio">Fit Minded is a strategic applied science firm founded by Dr. Jen Huberty, former Head of Science at Calm. The firm partners with digital health, femtech, and food-as-medicine innovators to design, validate, and communicate the science behind their products, strengthening credibility, accelerating growth, and advancing evidence-based innovation. With 250 clients and 50 peer-reviewed publications, FitMinded is redefining how evidence drives both innovation and business success.</p>
@@ -249,7 +249,7 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
       <div class="partner-photo-wrap">
         <img src="annette-fellows.jpeg" alt="Annette Fellows"/>
       </div>
-      <p class="partner-role">Business Strategy Partner</p>
+      <p class="partner-role">Business Strategy Chair</p>
       <p class="partner-org">Return on Vision Consulting</p>
       <h3 class="partner-name">Annette Fellows</h3>
       <p class="partner-bio">CEO of Return on Vision Consulting, Annette helps C-Suite leaders in healthcare, financial services, and startups translate their visions into measurable results. She brings broad perspective across strategy, sales, marketing, finance, technology, and operations from her time at UnitedHealth Group and Carlson Marketing Worldwide. Annette is Board Chair of the Foundation for Social Connection.</p>
@@ -268,6 +268,20 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
     <p>A growing network of cross-sector experts guiding MCert's work with scientific rigor, lived experience, and strategic insight</p>
   </div>
   <div class="advisors-grid">
+
+    <!-- Kelechi Ubozoh -->
+    <div class="advisor-card">
+      <div class="advisor-photo-wrap">
+        <img src="kelechi-ubozoh.jpeg" alt="Kelechi Ubozoh"/>
+      </div>
+      <p class="advisor-role">Public Health Advisor</p>
+      <h3 class="advisor-name">Kelechi Ubozoh</h3>
+      <p class="advisor-bio">For over a decade, Kelechi has worked in the California mental health system in the areas of research and advocacy, community engagement, stigma reduction, youth development and peer support. Kelechi has spoken publicly about her experiences on multiple platforms, including CBS This Morning with Gayle King, O The Oprah Magazine, and The S Word documentary.</p>
+      <a href="https://www.linkedin.com/in/kelechi-ubozoh-7605846/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
 
     <!-- Lisa Walker -->
     <div class="advisor-card">
@@ -304,7 +318,7 @@ footer p a{color:var(--teal);text-decoration:none;font-weight:500;}
       <div class="advisor-photo-wrap">
         <img src="megan-cornish.jpeg" alt="Megan Cornish"/>
       </div>
-      <p class="advisor-role">Communications &amp; Strategy Advisor</p>
+      <p class="advisor-role">Communications Advisor</p>
       <h3 class="advisor-name">Megan Cornish, LICSW</h3>
       <p class="advisor-bio">Megan is a licensed clinical social worker turned strategist who builds and scales ethical mental health brands. After years in clinical work, she saw how easily profit can eclipse ethics — and decided to do something about it. She now leads communications and strategy for companies that want to grow without compromising integrity, with a focus on positioning, messaging, and brand systems that center clinician experience while driving measurable business outcomes. Her work spans leadership consulting, brand strategy, and communications for high-growth organizations in behavioral health and health tech.</p>
       <a href="https://www.linkedin.com/in/megan-cornish/" target="_blank" class="linkedin-btn" style="margin-top:1.2rem;">
